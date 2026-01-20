@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# Environment secrets
+.env
+
+# dbt
+target/
+dbt_packages/
+
+# Logs & data
+logs/
+data/raw/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
