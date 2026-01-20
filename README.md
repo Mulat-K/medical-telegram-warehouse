@@ -134,40 +134,40 @@ For each Telegram message, the following fields are collected:
 ```text
 medical-telegram-warehouse/
 ├── .vscode/
-│ └── settings.json # VSCode workspace settings
+│ └── settings.json
 ├── .github/
 │ └── workflows/
-│ └── unittests.yml # GitHub Actions for CI/CD (unit tests)
-├── .env # Environment variables (API keys, DB passwords) - DO NOT COMMIT!
-├── .gitignore # Specifies intentionally untracked files
-├── docker-compose.yml # Defines multi-container Docker application
-├── Dockerfile # Defines Docker image for Python environment
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation (this file)
-├── data/ # Raw and processed data storage
-│ ├── raw/ # Raw data lake (JSON messages, images)
-│ │ ├── images/ # Raw images storage: data/raw/images/{channel_name}/{message_id}.jpg
-│ │ └── telegram_messages/ # Raw message storage: data/raw/telegram_messages/YYYY-MM-DD/channel_name.json
-├── logs/ # Directory for application logs
-├── medical_warehouse/ # dbt project directory
+│ └── unittests.yml 
+├── .env 
+├── .gitignore 
+├── docker-compose.yml 
+├── Dockerfile
+├── requirements.txt
+├── README.md 
+├── data/ 
+│ ├── raw/ 
+│ │ ├── images/ 
+│ │ └── telegram_messages/
+├── logs/ 
+├── medical_warehouse/
 │ ├── dbt_project.yml
-│ ├── profiles.yml # dbt database connection profiles
-│ ├── models/ # dbt models (transformations)
-│ │ ├── staging/ # Staging models (clean raw data)
-│ │ └── marts/ # Marts models (dimensional star schema)
-│ └── tests/ # dbt data tests
-├── src/ # Source code for Python applications
-│ ├── api/ # FastAPI application
+│ ├── profiles.yml
+│ ├── models/ 
+│ │ ├── staging/
+│ │ └── marts/
+│ └── tests/ 
+├── src/ 
+│ ├── api/ 
 │ │ ├── init.py
-│ │ ├── main.py # FastAPI application entry point
-│ │ ├── database.py # Database connection utility (SQLAlchemy)
-│ │ └── schemas.py # Pydantic models for API request/response validation
-│ ├── notebooks/ # Jupyter notebooks for exploration/analysis
+│ │ ├── main.py 
+│ │ ├── database.py
+│ │ └── schemas.py 
+│ ├── notebooks/
 │ │ ├── init.py
-│ ├── scraper.py # Telegram data scraping script (Task 1)
-│ ├── yolo_detect.py # YOLO object detection script (Task 3)
-│ ├── load_raw_to_postgres.py # Script to load raw JSON to PostgreSQL (Task 2)
-│ └── tests/ # Python unit tests for src modules
+│ ├── scraper.py 
+│ ├── yolo_detect.py
+│ ├── load_raw_to_postgres.py 
+│ └── tests/ 
 │ └── init.py
 └── scripts/
 
